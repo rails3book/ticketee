@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EdgeTicketee</title>
+  <title><%= title %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag    "projects" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |key, value| %><indexterm><primary>Displaying flash messages</primary></indexterm>
+  <% flash.each do |key, value| %>
     <div class='flash' id='<%= key %>'>
       <%= value %>
     </div>
