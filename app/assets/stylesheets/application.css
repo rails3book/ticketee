@@ -1,4 +1,146 @@
-/*
- * FIXME: Introduce SCSS & Sprockets
- *= require_tree . 
-*/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background: white;
+}
+
+body {
+  font: 13pt "Myriad Pro", Helvetica;
+  margin: 5px 10% 0px 10%;
+  height: 100%;
+  padding: 30px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+nav {
+  margin: 10px 0px 10px 0px;
+}
+
+a {
+  color: #74CC00;
+}
+
+textarea {
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input[type=file] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flash {
+  padding: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  font-weight: bold;
+}
+
+#notice {
+  background: #85FF00;
+  color: black;
+}
+
+#alert {
+  background: #FF3444;
+}
+
+ul#tickets {
+  padding: 15px;
+  list-style-type: none;
+}
+
+ul#tickets li {
+  margin-bottom: 10px;
+}
+
+ul#tickets .state {
+  margin-right: 4em;
+}
+
+
+ul#tickets .state {
+  float: left;
+}
+
+#ticket, .comment {
+  margin: 15px 0 15px 0;
+  padding: 15px;
+  background: #eaeaea;
+  border: 1px solid #e0e0e0;
+}
+
+#ticket a {
+  color: #67A300;
+}
+
+#ticket h2 {
+  float: left;
+}
+
+#ticket menu {
+  font-size: 75%;
+}
+
+menu, #ticket .state, .states {
+  float: right;
+}
+
+.comment .state {
+  display: inline;
+}
+
+#ticket section {
+  clear: both;
+}
+
+.state {
+  width: 4em;
+  text-align: center;
+  font-weight: bold;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 0px 5px;
+  font-size: 80%;
+  padding: 5px;
+}
+
+#ticket #tags {
+  margin-top: 20px;
+}
+
+#ticket .tag {
+  background: #232323;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: white;
+  padding: 8px;
+}
+
+#ticket .tag a {
+  color: white;
+}
+
+#ticket .tag .delete {
+  font-size: 125%;
+  text-decoration: none;
+}
+
+.new_comment { 
+  padding: 15px;
+  background: #eaeaea;
+}
+
+.comment, .new_comment {
+  width: 75%;
+}
