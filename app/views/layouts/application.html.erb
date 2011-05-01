@@ -15,7 +15,11 @@
   <% end %>
 <h1><%= link_to "Ticketee", root_path %></h1>
 <nav>
-  <%= link_to "Sign up", new_user_registration_path %>
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %>
+  <% end %>
 </nav>
 <%= yield %>
 

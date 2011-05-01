@@ -14,7 +14,6 @@ gem 'dynamic_form'
 
 gem 'devise', '1.2.1'
 
-
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
 end
@@ -25,4 +24,5 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'launchy'
+  gem 'email_spec'
 end

@@ -107,6 +107,8 @@ GEM
       warden (~> 1.0.3)
     diff-lcs (1.1.2)
     dynamic_form (1.1.4)
+    email_spec (1.1.1)
+      rspec (~> 2.0)
     erubis (2.7.0)
     execjs (0.3.0)
       multi_json (~> 1.0)
@@ -183,6 +185,7 @@ DEPENDENCIES
   database_cleaner
   devise (= 1.2.1)
   dynamic_form
+  email_spec
   factory_girl
   launchy
   rack!
