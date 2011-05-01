@@ -1,0 +1,2 @@
+<h2>New User</h2>
+<%= render "form" %>
