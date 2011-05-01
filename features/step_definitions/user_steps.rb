@@ -17,3 +17,8 @@ Given /^I am signed in as them$/ do
     Then I should see "Signed in successfully."
   })
 end
+
+Given /^I am signed in as "([^\"]*)"$/ do |email|
+  @user = User.find_by_email!(email)
+  steps("Given I am signed in as them")
+end
