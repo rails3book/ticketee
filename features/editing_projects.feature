@@ -11,7 +11,7 @@ Feature: Editing Projects
     Given there is a project called "TextMate 2"
     And I am on the homepage
     When I follow "TextMate 2"
-    And I follow "Edit"
+    And I follow "Edit Project"
 
   Scenario: Updating a project
     And I fill in "Name" with "TextMate 2 beta"
