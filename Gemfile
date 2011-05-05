@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails',     :path => 'vendor/rails'
-gem 'arel',      :git => 'git://github.com/rails/arel.git'
-gem 'rack',      '1.3.0.beta'
-gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git"
+gem 'rails',     '3.1.0.beta1'
+# gem 'arel',      :git => 'git://github.com/rails/arel.git'
+# gem 'rack',      '1.3.0.beta'
+# gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git"
 
 gem 'sqlite3'
 

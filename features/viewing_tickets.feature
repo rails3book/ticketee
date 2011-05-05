@@ -22,7 +22,6 @@ Background:
 
   Scenario: Viewing tickets for a given project
     When I follow "TextMate 2"
-    Then show me the page
     Then I should see "Make it shiny!"
     And I should not see "Standards compliance"
     When I follow "Make it shiny!"
