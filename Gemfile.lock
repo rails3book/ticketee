@@ -1,5 +1,6 @@
-PATH
-  remote: ~/Sites/gems/rack-test
+GIT
+  remote: git://github.com/radar/rack-test
+  revision: a4b7ef0a736d95205bdb8d79c1abb182cb4a8a71
   specs:
     rack-test (0.6.0)
       rack (>= 1.0)
