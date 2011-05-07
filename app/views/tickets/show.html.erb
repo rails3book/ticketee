@@ -15,17 +15,17 @@
   <small>Created by <%= @ticket.user.email %></small>
   <%= simple_format(@ticket.description) %>
 
-  <% if @ticket.asset.exists? %>
-    <h3>Attached File</h3>
-    <div class="asset">
-      <p>
-        <%= link_to File.basename(@ticket.asset.path), 
-        @ticket.asset.url %>
-      </p>
-      <p>
-        <small><%= number_to_human_size(@ticket.asset.size) %>
-       (<%= @ticket.asset.content_type %>)</small>
-      </p>
+  <% if @ticket.assets.exists? %>
+    <h3>Attached Files</h3>
+    <div class="assets">
+      <% @ticket.assets.each do |asset| %>
+        <p>
+          <%= link_to File.basename(asset.asset_file_name), asset.asset.url %>
+        </p>
+        <p>
+          <small><%= number_to_human_size(asset.asset.size) %></small>
+        </p>
+      <% end %>
     </div>
   <% end %>
 </div>

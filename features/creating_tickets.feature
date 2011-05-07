@@ -37,9 +37,13 @@ Feature: Creating Tickets
     
   Scenario: Creating a ticket with an attachment
     When I fill in "Title" with "Add documentation for blink tag"
-    And I fill in "Description" with "The blink tag has an unknown speed attribute"
-    And I attach the file "spec/fixtures/card.jpg" to "File"
+    And I fill in "Description" with "The blink tag has an undocumented speed attribute"
+    And I attach the file "spec/fixtures/speed.txt" to "File #1"
+    Then show me the page
+    And I attach the file "spec/fixtures/spin.txt" to "File #2"
+    And I attach the file "spec/fixtures/gradient.txt" to "File #3"
     And I press "Create Ticket"
     Then I should see "Ticket has been created."
-    Then show me the page
-    Then I should see "speed.txt" within "#ticket .asset"
+    And I should see "speed.txt" within "#ticket .assets"
+    And I should see "spin.txt" within "#ticket .assets"
+    And I should see "gradient.txt" within "#ticket .assets"
