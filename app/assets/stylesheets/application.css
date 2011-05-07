@@ -64,10 +64,32 @@ ul#tickets li {
   margin-bottom: 10px;
 }
 
+#permissions {
+  border: 1px solid #789B2F;
+}
+#permissions td, #permissions th {
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+}
+
+#permissions thead th {
+  background: #DFFF77;
+  border-bottom: 1px solid #789B2F;
+  padding: 10x;
+}
+
+#permissions tr.odd {
+  background: #F0FF91;
+}
+
+#permissions tr.even {
+  background: #C2EC4B;
+}
+
 ul#tickets .state {
   margin-right: 4em;
 }
-
 
 ul#tickets .state {
   float: left;

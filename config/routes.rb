@@ -1,8 +1,4 @@
 EdgeTicketee::Application.routes.draw do
-  get "users/confirmation"
-
-  get "users/index"
-
   devise_for :users
   
   get '/awaiting_confirmation', 
@@ -16,6 +12,12 @@ EdgeTicketee::Application.routes.draw do
   
   namespace :admin do
     root :to => "base#index"
-    resources :users
+    resources :users do
+      resources :permissions
+    end
   end
+  
+  put '/admin/users/:user_id/permissions', 
+    :to => 'admin/permissions#update',
+    :as => :update_user_permissions
 end

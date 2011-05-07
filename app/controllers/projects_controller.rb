@@ -63,7 +63,7 @@ class ProjectsController < ApplicationController
     end
     
     def check_for_sign_up
-      if request.referer == new_user_registration_url
+      if request.referer == user_registration_url
         redirect_to confirm_user_path
       end
     end

@@ -16,10 +16,11 @@
 <h1><%= link_to "Ticketee", root_path %></h1>
 <nav>
   <%= admins_only do %>
-    <%= link_to "Admin", admin_root_path %>
+    <%= link_to "Admin", admin_root_path %><br>
   <% end %>
   <% if user_signed_in? %>
     Signed in as <%= current_user.email %>
+    <%= link_to "Sign out", destroy_user_session_path %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %>
     <%= link_to "Sign in", new_user_session_path %>
