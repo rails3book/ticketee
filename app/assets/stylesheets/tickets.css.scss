@@ -3,3 +3,5 @@
   They will automatically be included in application.css.
   You can use Sass (SCSS) here: http://sass-lang.com/
 */
+
+$('a#add_another_file').click($ -> alert("whoops!"))

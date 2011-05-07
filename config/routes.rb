@@ -10,7 +10,7 @@ EdgeTicketee::Application.routes.draw do
     resources :tickets
   end
 
-  resources :assets
+  resources :files
 
   namespace :admin do
     root :to => "base#index"
