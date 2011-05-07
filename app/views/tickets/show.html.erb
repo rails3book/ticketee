@@ -12,7 +12,20 @@
                 :confirm => "Are you sure you want to delete this ticket?" %>
   <% end %>
 
-  <%= debug @ticket.user %>
   <small>Created by <%= @ticket.user.email %></small>
   <%= simple_format(@ticket.description) %>
+
+  <% if @ticket.asset.exists? %>
+    <h3>Attached File</h3>
+    <div class="asset">
+      <p>
+        <%= link_to File.basename(@ticket.asset.path), 
+        @ticket.asset.url %>
+      </p>
+      <p>
+        <small><%= number_to_human_size(@ticket.asset.size) %>
+       (<%= @ticket.asset.content_type %>)</small>
+      </p>
+    </div>
+  <% end %>
 </div>

@@ -15,6 +15,8 @@ gem 'dynamic_form'
 gem 'devise', '1.2.1'
 gem 'cancan'
 
+gem 'paperclip'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
 end
