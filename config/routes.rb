@@ -9,7 +9,9 @@ EdgeTicketee::Application.routes.draw do
   resources :projects do
     resources :tickets
   end
-  
+
+  resources :assets
+
   namespace :admin do
     root :to => "base#index"
     resources :users do
