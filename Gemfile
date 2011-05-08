@@ -29,6 +29,6 @@ group :test do
   gem 'capybara', :git => "git://github.com/radar/capybara"
   gem 'database_cleaner'
   gem 'factory_girl'
-  gem 'launchy'
   gem 'email_spec'
+  gem 'launchy'
 end

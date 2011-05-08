@@ -10,6 +10,10 @@ EdgeTicketee::Application.routes.draw do
     resources :tickets
   end
 
+  resources :tickets do
+    resources :comments
+  end
+
   resources :files
 
   namespace :admin do
