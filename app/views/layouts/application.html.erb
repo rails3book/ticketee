@@ -6,6 +6,15 @@
   <%= stylesheet_link_tag    "projects" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <style>
+    <% for state in @states %>
+      .state_<%= state.name.parameterize %> {
+        background: <%= state.background %>;
+        color: <%= state.color %>;
+      }
+    <% end %>
+  </style>
 </head>
 <body>
   <% flash.each do |key, value| %>

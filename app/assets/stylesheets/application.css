@@ -88,7 +88,8 @@ ul#tickets li {
 }
 
 ul#tickets .state {
-  margin-right: 4em;
+  padding-right: 5px;
+/*  margin-right: 4em;*/
 }
 
 ul#tickets .state {
@@ -100,14 +101,12 @@ ul#tickets .state {
   padding: 15px;
   background: #eaeaea;
   border: 1px solid #e0e0e0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 #ticket a {
   color: #67A300;
-}
-
-#ticket h2 {
-  float: left;
 }
 
 #ticket menu {
@@ -118,21 +117,18 @@ menu, #ticket .state, .states {
   float: right;
 }
 
-.comment .state {
-  display: inline;
-}
-
 #ticket section {
   clear: both;
 }
 
 .state {
+  display: inline;
   width: 4em;
   text-align: center;
   font-weight: bold;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  margin: 0px 5px;
+  margin-right: 10px;
   font-size: 80%;
   padding: 5px;
 }
@@ -161,6 +157,9 @@ menu, #ticket .state, .states {
 .new_comment { 
   padding: 15px;
   background: #eaeaea;
+  color: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 .comment, .new_comment {
