@@ -31,6 +31,7 @@ Feature: Creating comments
     And I should see "Text can't be blank"
     
   Scenario: Changing a ticket's state
+    Given "user@ticketee.com" can change states on the "Ticketee" project
     When I follow "Change a ticket's state"
     When I fill in "Text" with "This is a real issue"
     And I select "Open" from "State"
@@ -38,3 +39,7 @@ Feature: Creating comments
     Then I should see "Comment has been created."
     And I should see "Open" within "#ticket .state"
     Then I should see "State: Open" within "#comments"
+
+  Scenario: A user without permission cannot change the state
+    When I follow "Change a ticket's state"
+    Then I should not see the "#comment_state_id" element
