@@ -1,6 +1,16 @@
 GIT
+  remote: git://github.com/cucumber/cucumber-rails
+  revision: 099ef4a654f914f57207617b424d0ffef5616939
+  specs:
+    cucumber-rails (0.5.0)
+      capybara (>= 1.0.0.beta1)
+      cucumber (>= 0.10.2)
+      nokogiri (>= 1.4.4)
+      rack-test (>= 0.5.7)
+
+GIT
   remote: git://github.com/radar/capybara
-  revision: 43ea95f338cb9371b7b27b2082e18349873ff042
+  revision: 578d42d5c4e04aac05446a00338c7fc6a1b4b5a9
   specs:
     capybara (1.0.0.beta1)
       mime-types (>= 1.16)
@@ -17,13 +27,22 @@ GIT
     rack-test (0.6.0)
       rack (>= 1.0)
 
+GIT
+  remote: git://github.com/sstephenson/sprockets.git
+  revision: 031a13f918648241a7d94583207f42774ed05763
+  specs:
+    sprockets (2.0.0.beta.6)
+      hike (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+
 PATH
   remote: ~/Sites/gems/rack
   specs:
-    rack (1.3.0.beta)
+    rack (1.3.0.beta2)
 
-PATH
-  remote: ~/Sites/rails/edge-rails
+GEM
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.1.0.beta1)
       actionpack (= 3.1.0.beta1)
@@ -34,11 +53,11 @@ PATH
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       i18n (~> 0.6.0beta1)
-      rack (~> 1.3.0.beta)
+      rack (~> 1.3.0.beta2)
       rack-cache (~> 1.0.1)
-      rack-mount (~> 0.7.2)
+      rack-mount (~> 0.8.1)
       rack-test (~> 0.6.0)
-      sprockets (~> 2.0.0.beta.2)
+      sprockets (~> 2.0.0.beta.5)
       tzinfo (~> 0.3.27)
     activemodel (3.1.0.beta1)
       activesupport (= 3.1.0.beta1)
@@ -48,13 +67,74 @@ PATH
     activerecord (3.1.0.beta1)
       activemodel (= 3.1.0.beta1)
       activesupport (= 3.1.0.beta1)
-      arel (~> 2.1.0)
+      arel (~> 2.1.1)
       tzinfo (~> 0.3.27)
     activeresource (3.1.0.beta1)
       activemodel (= 3.1.0.beta1)
       activesupport (= 3.1.0.beta1)
     activesupport (3.1.0.beta1)
       multi_json (~> 1.0)
+    arel (2.1.1)
+    bcrypt-ruby (2.1.4)
+    builder (3.0.0)
+    cancan (1.6.5)
+    childprocess (0.1.9)
+      ffi (~> 1.0.6)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.1.1)
+    configuration (1.2.0)
+    cucumber (0.10.2)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.2)
+      gherkin (>= 2.3.5)
+      json (>= 1.4.6)
+      term-ansicolor (>= 1.0.5)
+    database_cleaner (0.6.7)
+    devise (1.2.1)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+    diff-lcs (1.1.2)
+    dynamic_form (1.1.4)
+    email_spec (1.1.1)
+      rspec (~> 2.0)
+    erubis (2.7.0)
+    execjs (1.0.0)
+      multi_json (~> 1.0)
+    factory_girl (1.3.3)
+    ffi (1.0.9)
+    gherkin (2.3.8)
+      json (>= 1.4.6)
+    hike (1.0.0)
+    i18n (0.6.0)
+    jquery-rails (1.0.7)
+      railties (~> 3.0)
+      thor (~> 0.14)
+    json (1.5.1)
+    json_pure (1.5.1)
+    launchy (0.4.0)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    mail (2.3.0)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    multi_json (1.0.2)
+    nokogiri (1.4.4)
+    orm_adapter (0.0.5)
+    paperclip (2.3.11)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+    polyglot (0.3.1)
+    rack-cache (1.0.2)
+      rack (>= 0.4)
+    rack-mount (0.8.1)
+      rack (>= 1.0.0)
+    rack-ssl (1.3.2)
+      rack
     rails (3.1.0.beta1)
       actionmailer (= 3.1.0.beta1)
       actionpack (= 3.1.0.beta1)
@@ -69,90 +149,20 @@ PATH
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       thor (~> 0.14.6)
-
-GEM
-  remote: http://rubygems.org/
-  specs:
-    arel (2.1.0)
-    bcrypt-ruby (2.1.4)
-    builder (3.0.0)
-    cancan (1.6.4)
-    childprocess (0.1.8)
-      ffi (~> 1.0.6)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.1.0)
-    configuration (1.2.0)
-    cucumber (0.10.2)
-      builder (>= 2.1.2)
-      diff-lcs (>= 1.1.2)
-      gherkin (>= 2.3.5)
-      json (>= 1.4.6)
-      term-ansicolor (>= 1.0.5)
-    cucumber-rails (0.4.1)
-      cucumber (>= 0.10.1)
-      nokogiri (>= 1.4.4)
-      rack-test (>= 0.5.7)
-    database_cleaner (0.6.7)
-    devise (1.2.1)
-      bcrypt-ruby (~> 2.1.2)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
-    diff-lcs (1.1.2)
-    dynamic_form (1.1.4)
-    email_spec (1.1.1)
-      rspec (~> 2.0)
-    erubis (2.7.0)
-    execjs (0.3.1)
-      multi_json (~> 1.0)
-    factory_girl (1.3.3)
-    ffi (1.0.7)
-      rake (>= 0.8.7)
-    gherkin (2.3.7)
-      json (>= 1.4.6)
-    hike (1.0.0)
-    i18n (0.6.0beta1)
-    jquery-rails (0.2.7)
-      rails (~> 3.0)
-      thor (~> 0.14.4)
-    json (1.5.1)
-    json_pure (1.5.1)
-    launchy (0.4.0)
-      configuration (>= 0.0.5)
-      rake (>= 0.8.1)
-    mail (2.3.0)
-      i18n (>= 0.4.0)
-      mime-types (~> 1.16)
-      treetop (~> 1.4.8)
-    mime-types (1.16)
-    multi_json (1.0.1)
-    nokogiri (1.4.4)
-    orm_adapter (0.0.4)
-    paperclip (2.3.11)
-      activerecord (>= 2.3.0)
-      activesupport (>= 2.3.2)
-    polyglot (0.3.1)
-    rack-cache (1.0.1)
-      rack (>= 0.4)
-    rack-mount (0.7.2)
-      rack (>= 1.0.0)
-    rack-ssl (1.3.2)
-      rack
     rake (0.8.7)
-    rspec (2.5.0)
-      rspec-core (~> 2.5.0)
-      rspec-expectations (~> 2.5.0)
-      rspec-mocks (~> 2.5.0)
-    rspec-core (2.5.1)
-    rspec-expectations (2.5.0)
+    rspec (2.6.0)
+      rspec-core (~> 2.6.0)
+      rspec-expectations (~> 2.6.0)
+      rspec-mocks (~> 2.6.0)
+    rspec-core (2.6.2)
+    rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.5.0)
-    rspec-rails (2.5.0)
+    rspec-mocks (2.6.0)
+    rspec-rails (2.6.1.beta1)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
       railties (~> 3.0)
-      rspec (~> 2.5.0)
+      rspec (~> 2.6.0)
     rubyzip (0.9.4)
     sass (3.1.1)
     selenium-webdriver (0.2.0)
@@ -160,14 +170,10 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
-    sprockets (2.0.0.beta.2)
-      hike (~> 1.0)
-      rack (~> 1.0)
-      tilt (~> 1.0)
     sqlite3 (1.3.3)
     term-ansicolor (1.0.5)
     thor (0.14.6)
-    tilt (1.3)
+    tilt (1.3.1)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
@@ -183,7 +189,7 @@ DEPENDENCIES
   cancan
   capybara!
   coffee-script
-  cucumber-rails
+  cucumber-rails!
   database_cleaner
   devise (= 1.2.1)
   dynamic_form
@@ -194,7 +200,9 @@ DEPENDENCIES
   paperclip
   rack!
   rack-test!
-  rails!
-  rspec-rails (~> 2.5)
+  rails (= 3.1.0.beta.1)
+  rake (= 0.8.7)
+  rspec-rails (~> 2.6.1.beta1)
   sass (~> 3.1.0.alpha)
+  sprockets!
   sqlite3

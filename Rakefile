@@ -4,4 +4,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+EdgeTicketee::Application.send :include, ::Rake::DSL if defined?(::Rake::DSL)
+
 EdgeTicketee::Application.load_tasks
