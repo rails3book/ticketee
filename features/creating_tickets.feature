@@ -47,3 +47,12 @@ Feature: Creating Tickets
     And I should see "speed.txt" within "#ticket .assets"
     And I should see "spin.txt" within "#ticket .assets"
     When I follow "speed.txt"
+    
+  Scenario: Creating a ticket with tags
+    When I fill in "Title" with "Non-standards compliance"
+    And I fill in "Description" with "My pages are ugly!"
+    And I fill in "Tags" with "browser visual"
+    And I press "Create Ticket"
+    Then I should see "Ticket has been created."
+    And I should see "browser" within "#ticket #tags"
+    And I should see "visual" within "#ticket #tags"

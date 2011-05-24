@@ -15,6 +15,7 @@
   <br><small>Created by <%= @ticket.user.email %></small>
   <%= render @ticket.state if @ticket.state %>
   <%= simple_format(@ticket.description) %>
+  <div id='tags'><%= render @ticket.tags %></div>
   <% if @ticket.assets.exists? %>
     <h3>Attached Files</h3>
     <div class="assets">

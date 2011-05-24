@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.beta.1'
+gem 'rails', '3.1.0.rc1'
 # gem 'arel',      :git => 'git://github.com/rails/arel.git'
 gem 'rack', :path => "~/Sites/gems/rack"
 gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git"
