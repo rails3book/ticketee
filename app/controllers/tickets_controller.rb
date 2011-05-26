@@ -17,7 +17,9 @@ class TicketsController < ApplicationController
   def create
     @ticket = @project.tickets.build(params[:ticket].merge!(:user => current_user))
     if @ticket.save
-      @ticket.tag!(params[:tags])
+      if can?(:tag, @project) || current_user.admin?
+        @ticket.tag!(params[:tags])
+      end
       flash[:notice] = "Ticket has been created."
       redirect_to [@project, @ticket]
     else

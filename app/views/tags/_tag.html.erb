@@ -1,1 +1,9 @@
-<span class='tag'><%= tag.name %></span>
+<span class='tag' id='tag-<%= tag.name.parameterize %>'>
+  <% if can?(:tag, @ticket.project) || current_user.admin? %>
+    <%= link_to "x", remove_ticket_tag_path(@ticket, tag),
+      :remote => true,
+      :method => :delete,
+      :id => "delete-#{tag.name.parameterize}" %>
+  <% end %>
+  <%= tag.name %>
+</span>

@@ -10,6 +10,7 @@ Feature: Creating comments
     And I am signed in as them
     And there is a project called "Ticketee"
     And "user@ticketee.com" can view the "Ticketee" project
+    And "user@ticketee.com" can tag the "Ticketee" project
     And "user@ticketee.com" has created a ticket for this project:
       | title                   | description                            |
       | Change a ticket's state | You should be able to create a comment |
@@ -43,3 +44,12 @@ Feature: Creating comments
   Scenario: A user without permission cannot change the state
     When I follow "Change a ticket's state"
     Then I should not see the "#comment_state_id" element
+
+  Scenario: Adding a tag to a ticket
+    When I follow "Change a ticket's state"
+    Then I should not see "bug" within "#ticket #tags"
+    And I fill in "Text" with "Adding the bug tag"
+    And I fill in "Tags" with "bug"
+    And I press "Create Comment"
+    Then I should see "Comment has been created"
+    Then I should see "bug" within "#ticket #tags"

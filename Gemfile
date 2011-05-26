@@ -5,8 +5,6 @@ gem 'rails', '3.1.0.rc1'
 gem 'rack', :path => "~/Sites/gems/rack"
 gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git"
 
-gem 'rake', '0.8.7'
-
 gem 'sqlite3'
 
 gem 'sass', '~> 3.1.0.alpha'
@@ -19,7 +17,7 @@ gem 'cancan'
 
 gem 'paperclip'
 
-gem 'jquery-rails'
+gem 'jquery-rails', :path => "~/Sites/gems/jquery-rails"
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.6.1.beta1'
