@@ -17,6 +17,8 @@ gem 'cancan'
 
 gem 'paperclip'
 
+gem 'searcher'
+
 gem 'jquery-rails', :path => "~/Sites/gems/jquery-rails"
 
 group :test, :development do

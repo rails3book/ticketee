@@ -169,6 +169,8 @@ GEM
       rspec (~> 2.6.0)
     rubyzip (0.9.4)
     sass (3.1.1)
+    searcher (0.0.6)
+      activerecord (~> 3.0)
     selenium-webdriver (0.2.0)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
@@ -207,5 +209,6 @@ DEPENDENCIES
   rails (= 3.1.0.rc1)
   rspec-rails (~> 2.6.1.beta1)
   sass (~> 3.1.0.alpha)
+  searcher
   sprockets!
   sqlite3
