@@ -22,6 +22,7 @@ gem 'searcher'
 gem 'jquery-rails', :path => "~/Sites/gems/jquery-rails"
 
 group :test, :development do
+  gem 'gmail'
   gem 'rspec-rails', '~> 2.6.1.beta1'
 end
 
