@@ -25,8 +25,6 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.6.1.beta1'
 end
 
-gem 'rcov'
-
 group :test do
   gem 'rack-test', :git => "git://github.com/radar/rack-test"
   gem 'cucumber-rails', :git => "git://github.com/cucumber/cucumber-rails"
