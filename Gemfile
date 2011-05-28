@@ -12,7 +12,7 @@ gem 'coffee-script'
 
 gem 'dynamic_form'
 
-gem 'devise', '1.2.1'
+gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'cancan'
 
 gem 'paperclip'
@@ -24,6 +24,8 @@ gem 'jquery-rails', :path => "~/Sites/gems/jquery-rails"
 group :test, :development do
   gem 'rspec-rails', '~> 2.6.1.beta1'
 end
+
+gem 'rcov'
 
 group :test do
   gem 'rack-test', :git => "git://github.com/radar/rack-test"
