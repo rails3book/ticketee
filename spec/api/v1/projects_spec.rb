@@ -3,12 +3,14 @@ require "spec_helper"
 describe "/api/v1/projects", :type => :api do
   let(:user) {  create_user! }
   let(:token) { user.authentication_token }
+  
+  before do
+    @project = Factory(:project)
+  end
 
   context "projects viewable by this user" do
-    let(:project) { Factory(:project) }
-
     before do
-      user.permissions.create!(:action => "view", :thing => project)
+      user.permissions.create!(:action => "view", :thing => @project)
 
       Factory(:project, :name => "Access denied.")
     end
@@ -51,10 +53,10 @@ describe "/api/v1/projects", :type => :api do
     it "sucessful JSON" do
       post "#{url}.json", :token => token,
                           :project => {
-                            :name => "Ticketee"
+                            :name => "Inspector"
                           }
 
-      project = Project.find_by_name("Ticketee")
+      project = Project.find_by_name("Inspector")
       route = "/api/v1/projects/#{project.id}"
 
       last_response.status.should eql(201)
@@ -69,6 +71,27 @@ describe "/api/v1/projects", :type => :api do
       last_response.status.should eql(422)
       errors = {"name" => ["can't be blank"]}.to_json
       last_response.body.should eql(errors)
+    end
+  end
+  
+  context "show" do
+    let(:url) { "/api/v1/projects/#{@project.id}"}
+
+    before do
+      Factory(:ticket, :project => @project)
+    end
+
+    it "JSON" do
+      get "#{url}.json", :token => token
+      project = @project.to_json(:methods => "last_ticket")
+      last_response.body.should eql(project)
+      last_response.status.should eql(200)
+
+
+      project_response = JSON.parse(last_response.body)["project"]
+
+      ticket_title = project_response["last_ticket"]["ticket"]["title"]
+      ticket_title.should_not be_blank
     end
   end
 end
