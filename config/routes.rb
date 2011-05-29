@@ -1,7 +1,9 @@
 EdgeTicketee::Application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :projects
+      resources :projects do
+        resources :tickets
+      end
     end
   end
 
