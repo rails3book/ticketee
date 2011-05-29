@@ -6,6 +6,14 @@ EdgeTicketee::Application.routes.draw do
       end
     end
   end
+  
+  namespace :api do
+    namespace :v2 do
+      resources :projects do
+        resources :tickets
+      end
+    end
+  end
 
   root :to => "projects#index"
   
