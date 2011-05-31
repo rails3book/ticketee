@@ -145,6 +145,7 @@ GEM
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
+    pg (0.11.0)
     polyglot (0.3.1)
     rack-cache (1.0.2)
       rack (>= 0.4)
@@ -218,6 +219,7 @@ DEPENDENCIES
   jquery-rails!
   launchy
   paperclip
+  pg
   rack!
   rack-test!
   rails (= 3.1.0.rc1)
