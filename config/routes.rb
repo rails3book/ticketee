@@ -1,16 +1,26 @@
+require 'heartbeat/application'
+
 EdgeTicketee::Application.routes.draw do
+  
+  mount Heartbeat::Application, :at => "/heartbeat"
+  
   namespace :api do
     namespace :v1 do
       resources :projects do
         resources :tickets
       end
     end
-  end
-  
-  namespace :api do
+    
     namespace :v2 do
       resources :projects do
         resources :tickets
+      end
+    end
+    
+    namespace :v3 do
+      namespace :json do
+        mount Api::V3::JSON::Tickets, 
+          :at => "/projects/:project_id/tickets"
       end
     end
   end
