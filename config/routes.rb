@@ -52,7 +52,9 @@ EdgeTicketee::Application.routes.draw do
     end
   end
   
-  devise_for :users
+  devise_for :users, :controllers => { 
+    :omniauth_callbacks => "users/omniauth_callbacks" 
+  }
   
   get '/awaiting_confirmation', 
     :to => "users#confirmation", 

@@ -20,6 +20,7 @@ gem 'paperclip'
 gem 'searcher'
 
 gem 'jquery-rails', :path => "~/Sites/gems/jquery-rails"
+gem "oa-oauth", :require => "omniauth/oauth"
 
 group :test, :development do
   gem 'gmail'
