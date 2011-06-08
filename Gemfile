@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc1'
+gem 'rails', :git => "git://github.com/rails/rails", :branch => "3-1-stable"
 # gem 'arel',      :git => 'git://github.com/rails/arel.git'
-gem 'rack', :path => "~/Sites/gems/rack"
+gem 'rack'
 gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git"
 
 gem 'sqlite3'
@@ -15,11 +15,12 @@ gem 'dynamic_form'
 gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'cancan'
 
-gem 'paperclip'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'searcher'
 
-gem 'jquery-rails', :path => "~/Sites/gems/jquery-rails"
+gem 'jquery-rails'
+gem "oa-oauth", :require => "omniauth/oauth"
 
 gem 'sinatra'
 
@@ -31,7 +32,7 @@ end
 group :test do
   gem 'rack-test', :git => "git://github.com/radar/rack-test"
   gem 'cucumber-rails', :git => "git://github.com/cucumber/cucumber-rails"
-  gem 'capybara', :git => "git://github.com/radar/capybara"
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'email_spec'

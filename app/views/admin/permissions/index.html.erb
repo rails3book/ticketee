@@ -1,4 +1,4 @@
-<h2>Permissions for <%= @user.email %></h2>
+<h2>Permissions for <%= @user %></h2>
 <%= form_tag update_user_permissions_path(@user), :method => :put do %>
   <table id='permissions' cellspacing='0'>
     <thead>

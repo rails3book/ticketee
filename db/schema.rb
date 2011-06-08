@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110529081807) do
+ActiveRecord::Schema.define(:version => 20110608062135) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -104,6 +104,12 @@ ActiveRecord::Schema.define(:version => 20110529081807) do
     t.boolean  "admin",                               :default => false
     t.string   "authentication_token"
     t.integer  "request_count",                       :default => 0
+    t.string   "twitter_id"
+    t.string   "twitter_screen_name"
+    t.string   "twitter_display_name"
+    t.integer  "github_id"
+    t.string   "github_user_name"
+    t.string   "github_display_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
