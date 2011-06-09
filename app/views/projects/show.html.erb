@@ -18,7 +18,7 @@
   <%= submit_tag "Search" %>
 <% end %>
 
-<% cache "projects/#{@project.id}/#{params[:page] || 1}" %>
+<% cache "projects/#{@project.id}/#{params[:page] || 1}" do %>
   <%= paginate @tickets %>
   <ul id='tickets'>
     <% @tickets.each do |ticket| %>
