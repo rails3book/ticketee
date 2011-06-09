@@ -22,6 +22,7 @@ gem 'kaminari'
 
 gem 'jquery-rails'
 gem "oa-oauth", :require => "omniauth/oauth"
+gem "delayed_job"
 
 group :test, :development do
   gem 'gmail'
