@@ -1,4 +1,5 @@
 class Ticket < ActiveRecord::Base
+  paginates_per 50
   searcher do
     label :tag, :from => :tags, :field => :name
     label :state, :from => :state, :field => "name"
