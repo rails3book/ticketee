@@ -18,6 +18,7 @@ gem 'cancan'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'searcher'
+gem 'kaminari'
 
 gem 'jquery-rails'
 gem "oa-oauth", :require => "omniauth/oauth"
