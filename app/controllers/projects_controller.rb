@@ -7,6 +7,9 @@ class ProjectsController < ApplicationController
                                          :update,
                                          :destroy]
   
+   # caches_action :show, :cache_path => (proc do
+   #      project_path(params[:id]) + "/#{current_user.id}/#{params[:page] || 1}"
+   #    end)
 
   def index
     @projects = Project.for(current_user).all
@@ -28,7 +31,7 @@ class ProjectsController < ApplicationController
   end
   
   def show
-    @tickets = @project.tickets
+    @tickets = @project.tickets.includes(:tags).page(params[:page]).per(50)
   end
   
   def edit

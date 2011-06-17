@@ -92,6 +92,11 @@ GIT
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
 
+PATH
+  remote: ../forem
+  specs:
+    ticketee-forem (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -122,6 +127,7 @@ GEM
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.5)
     database_cleaner (0.6.7)
+    delayed_job (1.8.4)
     diff-lcs (1.1.2)
     dynamic_form (1.1.4)
     email_spec (1.1.1)
@@ -150,6 +156,8 @@ GEM
       thor (~> 0.14)
     json (1.5.1)
     json_pure (1.5.1)
+    kaminari (0.12.4)
+      rails (>= 3.0.0)
     launchy (0.4.0)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
@@ -232,12 +240,14 @@ DEPENDENCIES
   coffee-script
   cucumber-rails!
   database_cleaner
+  delayed_job
   devise!
   dynamic_form
   email_spec
   factory_girl
   gmail
   jquery-rails
+  kaminari
   launchy
   oa-oauth
   paperclip!
@@ -251,3 +261,4 @@ DEPENDENCIES
   sinatra
   sprockets!
   sqlite3
+  ticketee-forem!

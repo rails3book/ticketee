@@ -2,7 +2,7 @@ class Api::V2::TicketsController < Api::V2::BaseController
   before_filter :find_project
   
   def index
-    respond_with(@project.tickets)
+    respond_with(@project.tickets.page(params[:page]))
   end
 
   private

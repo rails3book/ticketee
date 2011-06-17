@@ -10,3 +10,11 @@ Given /^"([^\"]*)" has created a ticket for this project:$/ do |email, table|
     ticket.save
   end
 end
+
+Given /^there are (\d+) tickets for this project$/ do |number|
+  number.to_i.times do |i|
+    @project.tickets.create!(:title => "Test",
+                             :description => "Placeholder ticket.",
+                             :user => @user)
+  end
+end

@@ -32,6 +32,8 @@ class TicketsController < ApplicationController
   def show
     @comment = @ticket.comments.build
     @states = State.all
+    fresh_when :last_modified => @ticket.updated_at,
+               :etag => @ticket.to_s + current_user.id.to_s
   end
   
   def edit
@@ -56,6 +58,7 @@ class TicketsController < ApplicationController
   
   def search
     @tickets = @project.tickets.search(params[:search])
+    @tickets = @tickets.page(params[:page]).per(50)
     render "projects/show"
   end
   

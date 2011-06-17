@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110608062135) do
+ActiveRecord::Schema.define(:version => 20110609123054) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -35,6 +35,22 @@ ActiveRecord::Schema.define(:version => 20110608062135) do
     t.datetime "updated_at"
     t.integer  "state_id"
     t.integer  "previous_state_id"
+  end
+
+  create_table "forem_posts", :force => true do |t|
+    t.integer  "topic_id"
+    t.text     "text"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forem_topics", :force => true do |t|
+    t.text     "subject"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "posts_count", :default => 0
   end
 
   create_table "permissions", :force => true do |t|

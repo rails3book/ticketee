@@ -1,9 +1,9 @@
 require 'heartbeat/application'
 
 EdgeTicketee::Application.routes.draw do
-  
   mount Heartbeat::Application, :at => "/heartbeat"
-  
+  mount Forem::Engine, :at => "/forem"
+
   namespace :api do
     namespace :v1 do
       resources :projects do
