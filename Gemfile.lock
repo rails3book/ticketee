@@ -92,6 +92,11 @@ GIT
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
 
+PATH
+  remote: ../forem
+  specs:
+    ticketee-forem (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -252,3 +257,4 @@ DEPENDENCIES
   searcher
   sprockets!
   sqlite3
+  ticketee-forem!

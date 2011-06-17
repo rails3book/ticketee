@@ -22,17 +22,17 @@
       <%= value %>
     </div>
   <% end %>
-<h1><%= link_to "Ticketee", root_path %></h1>
+<h1><%= link_to "Ticketee", main_app.root_path %></h1>
 <nav>
   <%= admins_only do %>
-    <%= link_to "Admin", admin_root_path %><br>
+    <%= link_to "Admin", main_app.admin_root_path %><br>
   <% end %>
   <% if user_signed_in? %>
     Signed in as <%= current_user %>
-    <%= link_to "Sign out", destroy_user_session_path %>
+    <%= link_to "Sign out", main_app.destroy_user_session_path %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path %>
-    <%= link_to "Sign in", new_user_session_path %>
+    <%= link_to "Sign up", main_app.new_user_registration_path %>
+    <%= link_to "Sign in", main_app.new_user_session_path %>
     
     <br>
     Or use <%= auth_providers(:twitter, :github) %>

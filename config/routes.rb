@@ -1,4 +1,7 @@
 EdgeTicketee::Application.routes.draw do
+
+  mount Forem::Engine, :at => "/forem"
+
   namespace :api do
     namespace :v1 do
       resources :projects do

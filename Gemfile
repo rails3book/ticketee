@@ -24,6 +24,9 @@ gem 'jquery-rails'
 gem "oa-oauth", :require => "omniauth/oauth"
 gem "delayed_job"
 
+# gem "forem", :git => "git://github.com/radar/forem"
+gem "ticketee-forem", :require => "forem", :path => "../forem"
+
 group :test, :development do
   gem 'gmail'
   gem 'rspec-rails', '~> 2.6.1.beta1'
