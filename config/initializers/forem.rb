@@ -1,1 +1,1 @@
-# Forem::Engine.user_class = User
+Forem::Engine.user_class = User
