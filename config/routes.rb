@@ -63,6 +63,7 @@ EdgeTicketee::Application.routes.draw do
   end
   
   devise_for :users, :controllers => { 
+    :registrations => "registrations",
     :omniauth_callbacks => "users/omniauth_callbacks" 
   }
   
