@@ -1,18 +1,15 @@
 source 'http://rubygems.org'
 
-gem 'rails', :git => "git://github.com/rails/rails", :branch => "3-1-stable"
-# gem 'arel',      :git => 'git://github.com/rails/arel.git'
-gem 'rack'
-gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git"
+gem 'rails', '3.1.0.rc6'
 
 gem 'sqlite3'
 
-gem 'sass', '~> 3.1.0.alpha'
-gem 'coffee-script'
+gem 'sass', '~> 3.1.0.rc6'
+gem 'coffee-rails'
 
 gem 'dynamic_form'
 
-gem 'devise', :git => "git://github.com/plataformatec/devise.git"
+gem 'devise', '1.4.2'
 gem 'cancan'
 
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
@@ -31,12 +28,12 @@ gem 'sinatra'
 
 group :test, :development do
   gem 'gmail'
-  gem 'rspec-rails', '~> 2.6.1.beta1'
+  gem 'rspec-rails', '~> 2.6'
 end
 
 group :test do
   gem 'rack-test', :git => "git://github.com/radar/rack-test"
-  gem 'cucumber-rails', :git => "git://github.com/cucumber/cucumber-rails"
+  gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
