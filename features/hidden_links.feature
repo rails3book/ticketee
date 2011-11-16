@@ -70,20 +70,20 @@ Feature: Hidden Links
     And I am signed in as "user@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
-    Then I should see the "Edit" link
+    Then I should see the "Edit Ticket" link
 
   Scenario: Edit ticket link is hidden from a user without permission
     Given "user@ticketee.com" can view the "TextMate 2" project
     And I am signed in as "user@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
-    Then I should not see the "Edit" link
+    Then I should not see the "Edit Ticket" link
 
   Scenario: Edit ticket link is shown to admins
     Given I am signed in as "admin@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
-    Then I should see the "Edit" link
+    Then I should see the "Edit Ticket" link
     
   Scenario: Delete ticket link is shown to a user with permission
     Given "user@ticketee.com" can view the "TextMate 2" project
@@ -91,18 +91,18 @@ Feature: Hidden Links
     And I am signed in as "user@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
-    Then I should see "Delete"
+    Then I should see "Delete Ticket"
 
   Scenario: Delete ticket link is hidden from a user without permission
     Given "user@ticketee.com" can view the "TextMate 2" project
     And I am signed in as "user@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
-    Then I should not see the "Delete" link
+    Then I should not see the "Delete Ticket" link
 
   Scenario: Delete ticket link is shown to admins
     Given I am signed in as "admin@ticketee.com"
     When I follow "TextMate 2"
     And I follow "Shiny!"
-    Then I should see the "Delete" link
+    Then I should see the "Delete Ticket" link
   
