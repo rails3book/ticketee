@@ -1,167 +1,167 @@
 * {
-  padding: 0px;
-  margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 html {
-  background: white;
+    background: white;
 }
 
 body {
-  font: 13pt "Myriad Pro", Helvetica;
-  margin: 5px 10% 0px 10%;
-  height: 100%;
-  padding: 30px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+    font: 13pt "Myriad Pro", Helvetica;
+    margin: 5px 10% 0 10%;
+    height: 100%;
+    padding: 30px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 h1 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
-  margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
 }
 
 a {
-  color: #74CC00;
+    color: #74CC00;
 }
 
 textarea {
-  padding: 3px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 input[type=file] {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .flash {
-  padding: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  font-weight: bold;
+    padding: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-weight: bold;
 }
 
 #notice {
-  background: #85FF00;
-  color: black;
+    background: #85FF00;
+    color: black;
 }
 
 #alert {
-  background: #FF3444;
+    background: #FF3444;
 }
 
 ul#tickets {
-  padding: 15px;
-  list-style-type: none;
+    padding: 15px;
+    list-style-type: none;
 }
 
 ul#tickets li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #permissions {
-  border: 1px solid #789B2F;
+    border: 1px solid #789B2F;
 }
 #permissions td, #permissions th {
-  padding: 10px;
-  margin: 0px;
-  text-align: center;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
 }
 
 #permissions thead th {
-  background: #DFFF77;
-  border-bottom: 1px solid #789B2F;
-  padding: 10x;
+    background: #DFFF77;
+    border-bottom: 1px solid #789B2F;
+    padding: 10px;
 }
 
 #permissions tr.odd {
-  background: #F0FF91;
+    background: #F0FF91;
 }
 
 #permissions tr.even {
-  background: #C2EC4B;
+    background: #C2EC4B;
 }
 
 ul#tickets .state {
-  padding-right: 5px;
-/*  margin-right: 4em;*/
+    padding-right: 5px;
+    /*  margin-right: 4em;*/
 }
 
 ul#tickets .state {
-  float: left;
+    float: left;
 }
 
 #ticket, .comment {
-  margin: 15px 0 15px 0;
-  padding: 15px;
-  background: #eaeaea;
-  border: 1px solid #e0e0e0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+    margin: 15px 0 15px 0;
+    padding: 15px;
+    background: #eaeaea;
+    border: 1px solid #e0e0e0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 #ticket a {
-  color: #67A300;
+    color: #67A300;
 }
 
 #ticket menu {
-  font-size: 75%;
+    font-size: 75%;
 }
 
 menu, #ticket .state, .states {
-  float: right;
+    float: right;
 }
 
 #ticket section {
-  clear: both;
+    clear: both;
 }
 
 .state {
-  display: inline;
-  width: 4em;
-  text-align: center;
-  font-weight: bold;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  margin-right: 10px;
-  font-size: 80%;
-  padding: 5px;
+    display: inline;
+    width: 4em;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-right: 10px;
+    font-size: 80%;
+    padding: 5px;
 }
 
 #ticket #tags {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 #ticket .tag {
-  background: #232323;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  color: white;
-  padding: 8px;
+    background: #232323;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    color: white;
+    padding: 8px;
 }
 
 #ticket .tag a {
-  color: white;
+    color: white;
 }
 
 #ticket .tag .delete {
-  font-size: 125%;
-  text-decoration: none;
+    font-size: 125%;
+    text-decoration: none;
 }
 
-.new_comment { 
-  padding: 15px;
-  background: #eaeaea;
-  color: black;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+.new_comment {
+    padding: 15px;
+    background: #eaeaea;
+    color: black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 .comment, .new_comment {
-  width: 75%;
+    width: 75%;
 }
