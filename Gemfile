@@ -21,8 +21,7 @@ gem 'jquery-rails'
 gem "oa-oauth", :require => "omniauth/oauth"
 gem "delayed_job"
 
-# gem "forem", :git => "git://github.com/radar/forem"
-gem "ticketee-forem", :require => "forem", :path => "../forem"
+gem "ticketee-forem", :require => "forem", :git => "git://github.com/rails3book/forem"
 
 gem 'sinatra'
 
