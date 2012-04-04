@@ -1,24 +1,24 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc6'
+gem 'rails', '3.1.0'
 
 gem 'sqlite3'
 
-gem 'sass', '~> 3.1.0.rc6'
+gem 'sass-rails', '~> 3.1.0'
 gem 'coffee-rails'
 
 gem 'dynamic_form'
 
-gem 'devise', '1.4.2'
+gem 'devise', '1.4.9'
 gem 'cancan'
 
-gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip'
 
 gem 'searcher'
 gem 'kaminari'
 
 gem 'jquery-rails'
-gem "oa-oauth", :require => "omniauth/oauth"
+gem "oa-oauth", '0.2.6', :require => "omniauth/oauth"
 gem "delayed_job"
 
 gem "ticketee-forem", :require => "forem", :git => "git://github.com/rails3book/forem"
@@ -31,8 +31,8 @@ group :test, :development do
 end
 
 group :test do
-  gem 'rack-test', :git => "git://github.com/radar/rack-test"
-  gem 'cucumber-rails'
+  gem 'rack-test'
+  gem 'cucumber-rails', '1.0.6'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
