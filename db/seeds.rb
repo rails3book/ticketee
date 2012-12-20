@@ -1,5 +1,5 @@
-admin_user = User.create(:email => "admin@ticketee.com",
-                         :password => "password")
+admin_user = User.create(:email => ENV["ADMIN_EMAIL_ADDRESS"],
+                         :password => ENV["ADMIN_PASSWORD"])
 admin_user.admin = true
 admin_user.confirm!
 

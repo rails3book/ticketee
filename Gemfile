@@ -28,6 +28,7 @@ gem 'sinatra'
 group :test, :development do
   gem 'gmail'
   gem 'rspec-rails', '~> 2.6'
+  gem 'dotenv'
 end
 
 group :test do
